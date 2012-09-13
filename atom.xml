@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[御风独行]]></title>
   <link href="http://vincentcn.github.com/atom.xml" rel="self"/>
   <link href="http://vincentcn.github.com/"/>
-  <updated>2012-09-14T01:19:53+08:00</updated>
+  <updated>2012-09-14T02:16:14+08:00</updated>
   <id>http://vincentcn.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Vincent Xue]]></name>
+    <email><![CDATA[vincentfcn@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
