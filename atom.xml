@@ -4,7 +4,7 @@
   <title><![CDATA[御风独行]]></title>
   <link href="http://vincentcn.github.com/atom.xml" rel="self"/>
   <link href="http://vincentcn.github.com/"/>
-  <updated>2012-09-17T01:03:33+08:00</updated>
+  <updated>2012-09-17T01:28:01+08:00</updated>
   <id>http://vincentcn.github.com/</id>
   <author>
     <name><![CDATA[Vincent Xue]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Kickoff Hello World]]></title>
-    <link href="http://vincentcn.github.com/blog/2012/09/16/kickoff-hello-world/"/>
+    <title type="html"><![CDATA[Start]]></title>
+    <link href="http://vincentcn.github.com/blog/2012/09/16/start/"/>
     <updated>2012-09-16T00:00:00+08:00</updated>
-    <id>http://vincentcn.github.com/blog/2012/09/16/kickoff-hello-world</id>
+    <id>http://vincentcn.github.com/blog/2012/09/16/start</id>
     <content type="html"><![CDATA[<p>﻿&#8212;
 layout: post
 title: &#8220;开始 - Hello World&#8221;
