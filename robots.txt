@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://vxue.me/sitemap.xml 
+Sitemap: http://vincentcn.github.com/sitemap.xml 

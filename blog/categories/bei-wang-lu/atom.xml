@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 备忘录 | 御风独行]]></title>
-  <link href="http://vxue.me/blog/categories/bei-wang-lu/atom.xml" rel="self"/>
-  <link href="http://vxue.me/"/>
-  <updated>2013-12-28T22:50:48+08:00</updated>
-  <id>http://vxue.me/</id>
+  <link href="http://vincentcn.github.com/blog/categories/bei-wang-lu/atom.xml" rel="self"/>
+  <link href="http://vincentcn.github.com/"/>
+  <updated>2014-01-14T23:49:08+08:00</updated>
+  <id>http://vincentcn.github.com/</id>
   <author>
     <name><![CDATA[Vincent Xue]]></name>
     <email><![CDATA[vincentfcn@gmail.com]]></email>
@@ -14,10 +14,34 @@
 
   
   <entry>
+    <title type="html"><![CDATA[使用less看比较大的Log文件]]></title>
+    <link href="http://vincentcn.github.com/blog/2014/01/14/nav-big-text-log-with-less/"/>
+    <updated>2014-01-14T23:19:34+08:00</updated>
+    <id>http://vincentcn.github.com/blog/2014/01/14/nav-big-text-log-with-less</id>
+    <content type="html"><![CDATA[<p>很多服务器程序的产品都部署在Linux/Unix，很多时候需要到Linux/Unix环境中查看Log，Log文件一般为比较大的文本文件，几百M或者几个G的文件都可能出现，特别是出现问题频繁抛出Exception或者错误的时候。这个时候使用文本工具比如vi(m)会比较慢。使用部分加载的Less可以比较方便地查看。 <br/>
+对于比较大的log文件，行号是一个比较好的定位方式。使用下面命令打开文件显示行号。
+<code>
+less -N #{filename}
+</code>
+查看的过程中文本搜索是必不可少的,
+<code>
+/#{keyword}
+</code>
+找到对应的结果时，文本直接跳转到对应的行号，由于是部分加载，这时候只显示搜索到文本的位置以及后面的内容，这时候的上下文往往是不完整的，如果想查看前面几行的内容。需要记住当前的行号，然后往上算出想查看的行号，比如当前是10000行，而想查看9990的内容，用行号+&ldquo;:"跳转到对应的行查看。
+```</p>
+
+<h1>{line_number}</h1>
+
+<p>```
+这样就能比较方便快速地在log文件中查看想要的内容了。</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Java备忘-Java运行环境中的Environment variables和System Properties]]></title>
-    <link href="http://vxue.me/blog/2013/12/28/java-note-runtime-configuration/"/>
+    <link href="http://vincentcn.github.com/blog/2013/12/28/java-note-runtime-configuration/"/>
     <updated>2013-12-28T19:49:59+08:00</updated>
-    <id>http://vxue.me/blog/2013/12/28/java-note-runtime-configuration</id>
+    <id>http://vincentcn.github.com/blog/2013/12/28/java-note-runtime-configuration</id>
     <content type="html"><![CDATA[<p>这篇Java备忘录，主要记录Java runtime的参数配置。</p>
 
 <h2>1. Environment Variables</h2>

@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: 科技 - 御风独行</title>
+  <title>使用less看比较大的Log文件 - 御风独行</title>
   <meta name="author" content="Vincent Xue">
 
   
-  <meta name="description" content="Category: 科技">
+  <meta name="description" content="很多服务器程序的产品都部署在Linux/Unix，很多时候需要到Linux/Unix环境中查看Log，Log文件一般为比较大的文本文件，几百M或者几个G的文件都可能出现，特别是出现问题频繁抛出Exception或者错误的时候。这个时候使用文本工具比如vi(m)会比较慢。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://vincentcn.github.comblog/categories/ke-ji">
+  <link rel="canonical" href="http://vincentcn.github.com/blog/2014/01/14/nav-big-text-log-with-less">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="御风独行" type="application/atom+xml">
@@ -77,36 +77,114 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: 科技</h1>
+    
+      <h1 class="entry-title">使用less看比较大的Log文件</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-14T23:19:34+08:00" pubdate data-updated="true">2014年01月14日</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://vincentcn.github.com">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>很多服务器程序的产品都部署在Linux/Unix，很多时候需要到Linux/Unix环境中查看Log，Log文件一般为比较大的文本文件，几百M或者几个G的文件都可能出现，特别是出现问题频繁抛出Exception或者错误的时候。这个时候使用文本工具比如vi(m)会比较慢。使用部分加载的Less可以比较方便地查看。 <br/>
+对于比较大的log文件，行号是一个比较好的定位方式。使用下面命令打开文件显示行号。</p>
 
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/blog/2012/09/16/start/">开始 - Hello World</a></h1>
-<time datetime="2012-09-16T12:40:00+08:00" pubdate><span class='month'>Sep</span> <span class='day'>16</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ke-ji/'>科技</a>, <a class='category' href='/blog/categories/sui-bi/'>随笔</a></span>
-</footer>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>less -N #{filename}</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<p>查看的过程中文本搜索是必不可少的,</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/#{keyword}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>找到对应的结果时，文本直接跳转到对应的行号，由于是部分加载，这时候只显示搜索到文本的位置以及后面的内容，这时候的上下文往往是不完整的，如果想查看前面几行的内容。需要记住当前的行号，然后往上算出想查看的行号，比如当前是10000行，而想查看9990的内容，用行号+&ldquo;:&#8221;跳转到对应的行查看。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#{line_number}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这样就能比较方便快速地在log文件中查看想要的内容了。</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Vincent Xue</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-14T23:19:34+08:00" pubdate data-updated="true">2014年01月14日</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/bei-wang-lu/'>备忘录</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/12/28/java-note-runtime-configuration/" title="Previous Post: Java备忘-Java运行环境中的Environment variables和System Properties">&laquo; Java备忘-Java运行环境中的Environment variables和System Properties</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -214,7 +292,10 @@
       var disqus_shortname = 'vxue';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://vincentcn.github.com/blog/2014/01/14/nav-big-text-log-with-less/';
+        var disqus_url = 'http://vincentcn.github.com/blog/2014/01/14/nav-big-text-log-with-less/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

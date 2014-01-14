@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 科技 | 御风独行]]></title>
-  <link href="http://vxue.me/blog/categories/ke-ji/atom.xml" rel="self"/>
-  <link href="http://vxue.me/"/>
-  <updated>2013-12-28T22:50:48+08:00</updated>
-  <id>http://vxue.me/</id>
+  <link href="http://vincentcn.github.com/blog/categories/ke-ji/atom.xml" rel="self"/>
+  <link href="http://vincentcn.github.com/"/>
+  <updated>2014-01-14T23:49:08+08:00</updated>
+  <id>http://vincentcn.github.com/</id>
   <author>
     <name><![CDATA[Vincent Xue]]></name>
     <email><![CDATA[vincentfcn@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[开始 - Hello World]]></title>
-    <link href="http://vxue.me/blog/2012/09/16/start/"/>
+    <link href="http://vincentcn.github.com/blog/2012/09/16/start/"/>
     <updated>2012-09-16T12:40:00+08:00</updated>
-    <id>http://vxue.me/blog/2012/09/16/start</id>
+    <id>http://vincentcn.github.com/blog/2012/09/16/start</id>
     <content type="html"><![CDATA[<p>早在中学时期或更早，没事儿的时候常常喜欢写些东西。偶尔兴致所致，也能写出个数万字的小说，但那时候都是用纸笔写的，随写随丢。现在偶尔能找到当时的一些片段，往往觉得不堪卒读，无论词句还是内容都稚嫩至极，甚至有点难堪，但往往也能勾起一些回忆。后来就习惯了这种难堪，时间总是不断在往前推进，今天看昨天的感觉，也许就是明天看今天的感觉，而这种难堪至少说明一切不是一成不变的，而且这些变化是在往让你较少难堪的方向，也就是你期望的方向在发展。此外对于喜欢变化的人来说，回忆的一大功效就是能在平淡无奇中找到明显的变化。  <br/>
 后来接触了计算机，并进入了软件这个以计算机为载体的行业。胡乱写些东西的习惯没变，方式变为了敲键盘而已。一直以来习惯将写的内容保存在自己的设备里，从最初的文本文件到后来的EDiary,再到现在用了挺久的Evernote, 管理和访问，同步越来越容易，但是仍然以自己保存和阅读为主。中间为了和朋友分享，前后开过几个博客，方式都是把自己本地写好的文章发布到博客里面。至今仍然如此，一直自己写，想分享的时候通过博客或者邮件发出去。这也是一直以来我使用博客的方式。 <br/>
 从最初使用博客至今也很多年了，前后经历了几个阶段。最初Web 2.0刚兴起的时候，选择了一个平台使用。后来发现诸多不自由，文章被和谐的次数也颇多。后来就想购买域名空间自己折腾，但因为懒一直没行动。其间云计算兴起，就在Google的Paas平台GAE上面使用免费空间自己搭建了一个，虽然GAE很快被墙了，国内不翻墙的朋友们都访问不了。但也一直在坚持，用了挺长时间。虽然一直在用Github,但是使用Github Pages搭建博客的相关细节最近才了解，并知道了一个很好用的工具Octopress。Octopress的口号是"A blogging framework for hackers.&ldquo;。其目标用户群算是找对了，对于一个码农来说，既没有流量和空间的限制，又可以最大限度地控制自己输出的内容，应该算得上一个完美的方案。至于其技术门槛，对稍懂程序的人来说，都不算是问题。这次，索性购买了自己的域名(<a href="http://vxue.me">vxue.me</a>)，就形成了现在的这个博客。 <br/>

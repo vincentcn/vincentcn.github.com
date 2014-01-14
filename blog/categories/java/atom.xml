@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Java | 御风独行]]></title>
-  <link href="http://vxue.me/blog/categories/java/atom.xml" rel="self"/>
-  <link href="http://vxue.me/"/>
-  <updated>2013-12-28T22:50:48+08:00</updated>
-  <id>http://vxue.me/</id>
+  <link href="http://vincentcn.github.com/blog/categories/java/atom.xml" rel="self"/>
+  <link href="http://vincentcn.github.com/"/>
+  <updated>2014-01-14T23:49:08+08:00</updated>
+  <id>http://vincentcn.github.com/</id>
   <author>
     <name><![CDATA[Vincent Xue]]></name>
     <email><![CDATA[vincentfcn@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Java备忘-Java运行环境中的Environment variables和System Properties]]></title>
-    <link href="http://vxue.me/blog/2013/12/28/java-note-runtime-configuration/"/>
+    <link href="http://vincentcn.github.com/blog/2013/12/28/java-note-runtime-configuration/"/>
     <updated>2013-12-28T19:49:59+08:00</updated>
-    <id>http://vxue.me/blog/2013/12/28/java-note-runtime-configuration</id>
+    <id>http://vincentcn.github.com/blog/2013/12/28/java-note-runtime-configuration</id>
     <content type="html"><![CDATA[<p>这篇Java备忘录，主要记录Java runtime的参数配置。</p>
 
 <h2>1. Environment Variables</h2>
