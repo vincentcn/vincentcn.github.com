@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>使用less看比较大的Log文件 - 御风独行</title>
+  <title>Less Is more,使用Less查看文本log - 御风独行</title>
   <meta name="author" content="Vincent Xue">
 
   
-  <meta name="description" content="很多服务器程序的产品都部署在Linux/Unix，很多时候需要到Linux/Unix环境中查看Log，Log文件一般为比较大的文本文件，几百M或者几个G的文件都可能出现，特别是出现问题频繁抛出Exception或者错误的时候。这个时候使用文本工具比如vi(m)会比较慢。 &hellip;">
+  <meta name="description" content="很多服务器程序都部署在 Linux/Unix 上，因此，跟踪一些 runtime 问题往往需要到 Linux/Unix 环境中查看Log，Log文件一般为比较大的文本文件，几百M或者几个G的Log文件都很常见，特别是出现问题频繁抛出Exception或者Error的时候。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://vincentcn.github.com/blog/2014/01/14/nav-big-text-log-with-less">
+  <link rel="canonical" href="http://vxue.me/blog/2014/01/14/nav-big-text-log-with-less">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="御风独行" type="application/atom+xml">
@@ -62,7 +62,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:vincentcn.github.com" />
+    <input type="hidden" name="q" value="site:vxue.me" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -81,7 +81,7 @@
   
   <header>
     
-      <h1 class="entry-title">使用less看比较大的Log文件</h1>
+      <h1 class="entry-title">Less Is more,使用Less查看文本log</h1>
     
     
       <p class="meta">
@@ -100,15 +100,19 @@
 <time datetime="2014-01-14T23:19:34+08:00" pubdate data-updated="true">2014年01月14日</time>
         
            | <a href="#disqus_thread"
-             data-disqus-identifier="http://vincentcn.github.com">Comments</a>
+             data-disqus-identifier="http://vxue.me">Comments</a>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>很多服务器程序的产品都部署在Linux/Unix，很多时候需要到Linux/Unix环境中查看Log，Log文件一般为比较大的文本文件，几百M或者几个G的文件都可能出现，特别是出现问题频繁抛出Exception或者错误的时候。这个时候使用文本工具比如vi(m)会比较慢。使用部分加载的Less可以比较方便地查看。 <br/>
-对于比较大的log文件，行号是一个比较好的定位方式。使用下面命令打开文件显示行号。</p>
+<div class="entry-content"><p>很多服务器程序都部署在 Linux/Unix 上，因此，跟踪一些 runtime 问题往往需要到 Linux/Unix 环境中查看Log，Log文件一般为比较大的文本文件，几百M或者几个G的Log文件都很常见，特别是出现问题频繁抛出Exception或者Error的时候。这个时候使用文本工具比如vi(m)会比较慢。使用能部分加载的Less可以比较方便地查看。使用下面是这些常用的Less命令可以很方便地查看Log文件。</p>
+
+<ul>
+<li>对于比较大的log文件，行号是一个比较好的定位方式。使用下面命令打开文件显示行号。</li>
+</ul>
+
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>less -N #{filename}</span></code></pre></td></tr></table></div></figure>
@@ -123,10 +127,65 @@
 <p>找到对应的结果时，文本直接跳转到对应的行号，由于是部分加载，这时候只显示搜索到文本的位置以及后面的内容，这时候的上下文往往是不完整的，如果想查看前面几行的内容。需要记住当前的行号，然后往上算出想查看的行号，比如当前是10000行，而想查看9990的内容，用行号+&ldquo;:&#8221;跳转到对应的行查看。</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#{line_number}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#{line_number}g</span></code></pre></td></tr></table></div></figure>
 
 
-<p>这样就能比较方便快速地在log文件中查看想要的内容了。</p>
+<p>这样就能比较方便快速地在比较大的log文件中查看想要的内容了。</p>
+
+<ul>
+<li>常用的打开参数。</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>-i：  忽略搜索时的大小写。
+</span><span class='line'>-m：  显示进度的百分比，类似于more命令的百分比更能。
+</span><span class='line'>-o： #{filename} 将less 输出的内容在指定文件中保存起来。</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>搜索相关命令</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/#{keywoard}：向下搜索“字符串”的功能。
+</span><span class='line'>?#{keywoard}：向上搜索“字符串”的功能。
+</span><span class='line'>n：重复前一个搜索（与 / 或 ? 有关。
+</span><span class='line'>n：重复前一个搜索（与 / 或 ? 有关。
+</span><span class='line'>&#{keyword}： - 仅显示匹配模式的行，而不是整个文件。</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>导航命令</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>g: 跳转到第一行。
+</span><span class='line'>G: 跳转到最后一行。
+</span><span class='line'>j: 向前移动一行。
+</span><span class='line'>k或y或空格或回车: 向后移动一行。
+</span><span class='line'>ma: 使用 a 标记文本的当前位置, 类似于设置bookmark. 'a - 导航到标记 a 处。
+</span><span class='line'>b: 向前翻一页。
+</span><span class='line'>d: 向后翻半页。
+</span><span class='line'>u: 向前翻半夜</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
 
 
@@ -163,10 +222,26 @@
     
       <div class="sharing">
   
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://vxue.me/blog/2014/01/14/nav-big-text-log-with-less/" data-via="vxue" data-counturl="http://vxue.me/blog/2014/01/14/nav-big-text-log-with-less/" >Tweet</a>
+  
   
   <div class="g-plusone" data-size="medium"></div>
   
   
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+  
+    <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
   
 </div>
 
@@ -202,7 +277,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/01/14/nav-big-text-log-with-less/">使用less看比较大的Log文件</a>
+        <a href="/blog/2014/01/14/nav-big-text-log-with-less/">Less Is more,使用Less查看文本log</a>
       </li>
     
       <li class="post">
@@ -293,8 +368,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://vincentcn.github.com/blog/2014/01/14/nav-big-text-log-with-less/';
-        var disqus_url = 'http://vincentcn.github.com/blog/2014/01/14/nav-big-text-log-with-less/';
+        var disqus_identifier = 'http://vxue.me/blog/2014/01/14/nav-big-text-log-with-less/';
+        var disqus_url = 'http://vxue.me/blog/2014/01/14/nav-big-text-log-with-less/';
         var disqus_script = 'embed.js';
       
     (function () {
@@ -305,6 +380,15 @@
 </script>
 
 
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
 
