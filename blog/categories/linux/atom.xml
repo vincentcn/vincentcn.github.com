@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | 御风独行]]></title>
   <link href="http://vxue.me/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://vxue.me/"/>
-  <updated>2014-04-25T00:53:10+08:00</updated>
+  <updated>2014-06-25T01:05:20-07:00</updated>
   <id>http://vxue.me/</id>
   <author>
     <name><![CDATA[Vincent Xue]]></name>
@@ -16,12 +16,12 @@
   <entry>
     <title type="html"><![CDATA[Less Is more,使用Less查看文本log]]></title>
     <link href="http://vxue.me/blog/2014/01/14/nav-big-text-log-with-less/"/>
-    <updated>2014-01-14T23:19:34+08:00</updated>
+    <updated>2014-01-14T07:19:34-08:00</updated>
     <id>http://vxue.me/blog/2014/01/14/nav-big-text-log-with-less</id>
     <content type="html"><![CDATA[<p>很多服务器程序都部署在 Linux/Unix 上，因此，跟踪一些 runtime 问题往往需要到 Linux/Unix 环境中查看Log，Log文件一般为比较大的文本文件，几百M或者几个G的Log文件都很常见，特别是出现问题频繁抛出Exception或者Error的时候。这个时候使用文本工具比如vi(m)会比较慢。使用能部分加载的Less可以比较方便地查看。使用下面是这些常用的Less命令可以很方便地查看Log文件。</p>
 
 <ul>
-<li><p>对于比较大的log文件，行号是一个比较好的定位方式。使用下面命令打开文件显示行号。
+<li>对于比较大的log文件，行号是一个比较好的定位方式。使用下面命令打开文件显示行号。
 <code>
 less -N #{filename}
 </code>
@@ -30,18 +30,26 @@ less -N #{filename}
 /#{keyword}
 </code>
 找到对应的结果时，文本直接跳转到对应的行号，由于是部分加载，这时候只显示搜索到文本的位置以及后面的内容，这时候的上下文往往是不完整的，如果想查看前面几行的内容。需要记住当前的行号，然后往上算出想查看的行号，比如当前是10000行，而想查看9990的内容，用行号+&ldquo;:"跳转到对应的行查看。
-```</p>
+```
 
 <h1>{line_number}g</h1>
 
 <p>```
 这样就能比较方便快速地在比较大的log文件中查看想要的内容了。</p></li>
-<li><p>常用的打开参数。
+</ul>
+
+
+<p><strong>================================2014-06-25更新================================</strong>      <br/>
+<strong>其实，向前/后翻页的命令b,d等是基于当前行号向前或向后翻页，因此想查看当前匹配行前面几行的内容时(如光标目前在10000行，查看9990行的内容)，不需要上述这么麻烦的方法，直接使用b,d翻页即可。这是当时不熟悉Less命令用法时一个迂回的用法。</strong>
+<strong>==============================================================================</strong></p>
+
+<ul>
+<li>常用的打开参数。
 <code>
 -i：  忽略搜索时的大小写。
 -m：  显示进度的百分比，类似于more命令的百分比更能。
 -o： #{filename} 将less 输出的内容在指定文件中保存起来。
-</code></p></li>
+</code></li>
 <li>搜索相关命令
 <code>
 /#{keywoard}：向下搜索“字符串”的功能。
