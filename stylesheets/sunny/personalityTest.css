@@ -1,0 +1,45 @@
+div {
+    margin: 0 auto;
+    //
+}
+
+.fixed-width
+{
+    width: 800px;
+}
+
+h1 , h2, h3{
+    text-align: center;
+}
+
+.question-list span{
+    display:-moz-inline-box;
+    display:inline-block;
+    overflow:hidden;
+    white-space: nowrap;
+}
+
+.question-id{
+    width:30px;
+}
+
+.question-q1,.question-q2{
+    width:745px;
+}
+
+.question-a1,.question-a2
+{
+    width:25px;
+}
+
+
+#action-form{
+    text-align: center;
+}
+
+#results-chart {
+    width: 600px;
+    height: 400px;
+    float: none;
+    //border: 1px dashed gainsboro;
+}

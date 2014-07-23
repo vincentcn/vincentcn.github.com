@@ -36,4 +36,16 @@
         <loc>http://vxue.me/robots.txt</loc>
         <lastmod>2014-01-14T07:51:10-08:00</lastmod>
     </url>
+    <url>
+        <loc>http://vxue.me/sunny/</loc>
+        <lastmod>2014-07-23T01:03:18-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://vxue.me/sunny/personalitytest/</loc>
+        <lastmod>2014-07-23T01:21:25-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://vxue.me/sunny/randomdecision/</loc>
+        <lastmod>2014-07-23T01:27:20-07:00</lastmod>
+    </url>
 </urlset>
