@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | 御风独行]]></title>
   <link href="http://vxue.me/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://vxue.me/"/>
-  <updated>2014-07-23T01:34:24-07:00</updated>
+  <updated>2014-07-30T00:17:35+08:00</updated>
   <id>http://vxue.me/</id>
   <author>
     <name><![CDATA[Vincent Xue]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Less Is more,使用Less查看文本log]]></title>
     <link href="http://vxue.me/blog/2014/01/14/nav-big-text-log-with-less/"/>
-    <updated>2014-01-14T07:19:34-08:00</updated>
+    <updated>2014-01-14T23:19:34+08:00</updated>
     <id>http://vxue.me/blog/2014/01/14/nav-big-text-log-with-less</id>
     <content type="html"><![CDATA[<p>很多服务器程序都部署在 Linux/Unix 上，因此，跟踪一些 runtime 问题往往需要到 Linux/Unix 环境中查看Log，Log文件一般为比较大的文本文件，几百M或者几个G的Log文件都很常见，特别是出现问题频繁抛出Exception或者Error的时候。这个时候使用文本工具比如vi(m)会比较慢。使用能部分加载的Less可以比较方便地查看。使用下面是这些常用的Less命令可以很方便地查看Log文件。</p>
 
